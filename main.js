@@ -17,7 +17,7 @@ app.get('/test', (req, res) => {
 app.get('/register/:username', (req, res) => {
     let username = req.params.username
     console.log(username)
-    res.send(username)
+    res.send("Entered Name: " + username)
 })
 
 app.listen(port, () => {
