@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 
+//Json interaktionen in js anschauen
+
 const app = express();
 const port = 3000;
 
@@ -13,12 +15,13 @@ app.get('/', (req, res) => {
 app.get('/test', (req, res) => {
     res.send('Server\'s fine')
 })
+ 
 
-app.get('/register/:username', (req, res) => {
-    let username = req.params.username
-    console.log(username)
-    res.send("Entered Name: " + username)
-})
+app.get('/file/:filename', (req, res) => {
+    const filename = req.params.filename
+    const file = `${__dirname}/files/` +filename;
+    res.download(file); // Set disposition and send it.
+  });
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
