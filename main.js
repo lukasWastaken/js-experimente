@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 
 //Json interaktionen in js anschauen
 
@@ -17,10 +16,11 @@ app.get('/test', (req, res) => {
 })
  
 
+
 app.get('/file/:filename', (req, res) => {
     const filename = req.params.filename
     const file = `${__dirname}/files/` +filename;
-    res.download(file); // Set disposition and send it.
+    res.download(file); 
   });
 
 app.listen(port, () => {
