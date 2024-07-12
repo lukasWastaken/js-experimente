@@ -8,7 +8,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "sl3mey",
   "license": "ISC",
   "description": "",
   "dependencies": {
